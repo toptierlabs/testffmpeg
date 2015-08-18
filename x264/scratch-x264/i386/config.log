@@ -1,0 +1,172 @@
+x264 configure script
+Command line options: "--enable-static" "--enable-pic" "--disable-cli" "--host=i386-apple-darwin" "--extra-cflags=-arch" "i386" "-mios-simulator-version-min=5.0" "--extra-ldflags=-arch" "i386" "-mios-simulator-version-min=5.0" "--prefix=/Users/toptierlabs/Desktop/Projects/test/x264/thin-x264/i386"
+
+checking whether xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 works... yes
+checking whether xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 supports for( int i = 0; i < 9; i++ ); with -std=gnu99... yes
+checking whether yasm supports vpmovzxwd ymm0, xmm0... yes
+checking whether xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 supports __asm__("pabsw %xmm0, %xmm0");... yes
+checking for -mpreferred-stack-boundary=5... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 conftest.c -m32  -Wall -I. -I$(SRCPATH) -arch i386 -mios-simulator-version-min=5.0 -march=i686 -mfpmath=sse -msse -std=gnu99  -mpreferred-stack-boundary=5  -m32  -arch i386 -mios-simulator-version-min=5.0 -lm -o conftest
+clang: error: unknown argument: '-mpreferred-stack-boundary=5'
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for pthread_create(0,0,0,0); in pthread.h... yes
+checking for return log2f(2); in math.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 conftest.c -m32  -Wall -I. -I$(SRCPATH) -arch i386 -mios-simulator-version-min=5.0 -march=i686 -mfpmath=sse -msse -std=gnu99  -Werror  -m32  -arch i386 -mios-simulator-version-min=5.0 -lm -lpthread -o conftest
+error: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Werror,-Wunknown-warning-option]
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <math.h>
+int main (void) { return log2f(2); return 0; }
+--------------------------------------------------
+checking for sws_init_context(0,0,0); in libswscale/swscale.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 conftest.c -m32  -Wall -I. -I$(SRCPATH) -arch i386 -mios-simulator-version-min=5.0 -march=i686 -mfpmath=sse -msse -std=gnu99   -I/usr/local/Cellar/ffmpeg/2.4.3/include   -L/usr/local/Cellar/ffmpeg/2.4.3/lib -lswscale -lavutil   -m32  -arch i386 -mios-simulator-version-min=5.0 -lm -lpthread -o conftest
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+1 warning generated.
+ld: warning: ld: warning: ignoring file /usr/local/Cellar/ffmpeg/2.4.3/lib/libswscale.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/Cellar/ffmpeg/2.4.3/lib/libswscale.dylibignoring file /usr/local/Cellar/ffmpeg/2.4.3/lib/libavutil.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/Cellar/ffmpeg/2.4.3/lib/libavutil.dylib
+
+Undefined symbols for architecture i386:
+  "_sws_init_context", referenced from:
+      _main in conftest-212a73.o
+ld: symbol(s) not found for architecture i386
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <libswscale/swscale.h>
+int main (void) { sws_init_context(0,0,0); return 0; }
+--------------------------------------------------
+checking for av_frame_free(0); in libavformat/avformat.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 conftest.c -m32  -Wall -I. -I$(SRCPATH) -arch i386 -mios-simulator-version-min=5.0 -march=i686 -mfpmath=sse -msse -std=gnu99   -I/usr/local/Cellar/ffmpeg/2.4.3/include  -L.  -L/usr/local/Cellar/ffmpeg/2.4.3/lib -lavformat -lavcodec -lavutil -lswscale   -m32  -arch i386 -mios-simulator-version-min=5.0 -lm -lpthread -o conftest
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+1 warning generated.
+ld: warning: ld: warning: ld: warning: ignoring file /usr/local/Cellar/ffmpeg/2.4.3/lib/libavformat.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/Cellar/ffmpeg/2.4.3/lib/libavformat.dylibignoring file /usr/local/Cellar/ffmpeg/2.4.3/lib/libavcodec.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/Cellar/ffmpeg/2.4.3/lib/libavcodec.dylibignoring file /usr/local/Cellar/ffmpeg/2.4.3/lib/libavutil.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/Cellar/ffmpeg/2.4.3/lib/libavutil.dylib
+
+
+ld: warning: ignoring file /usr/local/Cellar/ffmpeg/2.4.3/lib/libswscale.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/Cellar/ffmpeg/2.4.3/lib/libswscale.dylib
+Undefined symbols for architecture i386:
+  "_av_frame_free", referenced from:
+      _main in conftest-3ca56a.o
+ld: symbol(s) not found for architecture i386
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <libavformat/avformat.h>
+int main (void) { av_frame_free(0); return 0; }
+--------------------------------------------------
+checking for FFMS_DestroyVideoSource(0); in ffms.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 conftest.c -m32  -Wall -I. -I$(SRCPATH) -arch i386 -mios-simulator-version-min=5.0 -march=i686 -mfpmath=sse -msse -std=gnu99   -lffms2  -m32  -arch i386 -mios-simulator-version-min=5.0 -lm -lpthread -o conftest
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+conftest.c:1:10: fatal error: 'ffms.h' file not found
+#include <ffms.h>
+         ^
+1 warning and 1 error generated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <ffms.h>
+int main (void) { FFMS_DestroyVideoSource(0); return 0; }
+--------------------------------------------------
+checking for FFMS_DestroyVideoSource(0); in ffms.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 conftest.c -m32  -Wall -I. -I$(SRCPATH) -arch i386 -mios-simulator-version-min=5.0 -march=i686 -mfpmath=sse -msse -std=gnu99   -lffms2 -lstdc++ -L.  -L/usr/local/Cellar/ffmpeg/2.4.3/lib -lavformat -lavcodec -lavutil -lswscale   -m32  -arch i386 -mios-simulator-version-min=5.0 -lm -lpthread -o conftest
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+conftest.c:1:10: fatal error: 'ffms.h' file not found
+#include <ffms.h>
+         ^
+1 warning and 1 error generated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <ffms.h>
+int main (void) { FFMS_DestroyVideoSource(0); return 0; }
+--------------------------------------------------
+checking for lsmash.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 conftest.c -m32  -Wall -I. -I$(SRCPATH) -arch i386 -mios-simulator-version-min=5.0 -march=i686 -mfpmath=sse -msse -std=gnu99   -llsmash  -m32  -arch i386 -mios-simulator-version-min=5.0 -lm -lpthread -o conftest
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+conftest.c:1:10: fatal error: 'lsmash.h' file not found
+#include <lsmash.h>
+         ^
+1 warning and 1 error generated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <lsmash.h>
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -lz... yes
+checking for gpac/isomedia.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 conftest.c -m32  -Wall -I. -I$(SRCPATH) -arch i386 -mios-simulator-version-min=5.0 -march=i686 -mfpmath=sse -msse -std=gnu99  -lgpac_static -lz  -m32  -arch i386 -mios-simulator-version-min=5.0 -lm -lpthread -o conftest
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+conftest.c:1:10: fatal error: 'gpac/isomedia.h' file not found
+#include <gpac/isomedia.h>
+         ^
+1 warning and 1 error generated.
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <gpac/isomedia.h>
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3}; in stdint.h... yes
+checking for stdio.h... no
+Failed commandline was:
+--------------------------------------------------
+xcrun -sdk iphonesimulator clang -Wno-error=unused-command-line-argument-hard-error-in-future -arch i386 conftest.c -m32  -Wall -I. -I$(SRCPATH) -arch i386 -mios-simulator-version-min=5.0 -march=i686 -mfpmath=sse -msse -std=gnu99 -fPIC  -shared -Wl,-Bsymbolic -ldl  -m32  -arch i386 -mios-simulator-version-min=5.0 -lm -lpthread -o conftest
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+1 warning generated.
+ld: unknown option: -Bsymbolic
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+--------------------------------------------------
+Failed program was:
+--------------------------------------------------
+#include <stdio.h>
+int main (void) {  return 0; }
+--------------------------------------------------
+checking for -fno-tree-vectorize... yes
+checking for fseeko(stdin,0,0); in stdio.h... yes
+checking for -Wshadow... yes
+checking for -Wmaybe-uninitialized... yes
+
+platform:      X86
+system:        MACOSX
+cli:           no
+libx264:       internal
+shared:        no
+static:        yes
+asm:           yes
+interlaced:    yes
+avs:           avxsynth
+lavf:          no
+ffms:          no
+mp4:           no
+gpl:           yes
+thread:        posix
+opencl:        yes
+filters:       crop select_every 
+debug:         no
+gprof:         no
+strip:         no
+PIC:           yes
+bit depth:     8
+chroma format: all

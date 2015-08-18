@@ -92,10 +92,10 @@
         NSError *error = nil;
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSDictionary *inputFileAttributes = [fileManager attributesOfItemAtPath:inputPath error:&error];
-        if (error) {
-            [self finishWithSuccess:NO error:error completionBlock:completionBlock];
-            return;
-        }
+        //if (error) {
+        //    [self finishWithSuccess:NO error:error completionBlock:completionBlock];
+        //    return;
+        //}
         uint64_t totalBytesExpectedToRead = [[inputFileAttributes objectForKey:NSFileSize] unsignedLongLongValue];
         uint64_t totalBytesRead = 0;
         
@@ -113,10 +113,10 @@
             [self finishWithSuccess:NO error:error completionBlock:completionBlock];
             return;
         }
-        if (![outputFile writeHeaderWithError:&error]) {
-            [self finishWithSuccess:NO error:error completionBlock:completionBlock];
-            return;
-        }
+        //if (![outputFile writeHeaderWithError:&error]) {
+        //    [self finishWithSuccess:NO error:error completionBlock:completionBlock];
+        //    return;
+        //}
         
         FFBitstreamFilter *bitstreamFilter = [[FFBitstreamFilter alloc] initWithFilterName:@"h264_mp4toannexb"];
         [outputFile addBitstreamFilter:bitstreamFilter];
@@ -125,6 +125,7 @@
         BOOL continueReading = YES;
         AVPacket *packet = av_malloc(sizeof(AVPacket));
         while (continueReading) {
+            error = nil;
             continueReading = [inputFile readFrameIntoPacket:packet error:&error];
             if (error) {
                 [self finishWithSuccess:NO error:error completionBlock:completionBlock];

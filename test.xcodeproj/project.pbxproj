@@ -14,6 +14,27 @@
 		9BE053F71B82C388005BCD96 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BE053F61B82C388005BCD96 /* Images.xcassets */; };
 		9BE053FA1B82C388005BCD96 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BE053F81B82C388005BCD96 /* LaunchScreen.xib */; };
 		9BE054061B82C388005BCD96 /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE054051B82C388005BCD96 /* testTests.m */; };
+		9BE054161B82CA8A005BCD96 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE0540F1B82CA8A005BCD96 /* libavcodec.a */; };
+		9BE054171B82CA8A005BCD96 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054101B82CA8A005BCD96 /* libavdevice.a */; };
+		9BE054181B82CA8A005BCD96 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054111B82CA8A005BCD96 /* libavfilter.a */; };
+		9BE054191B82CA8A005BCD96 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054121B82CA8A005BCD96 /* libavformat.a */; };
+		9BE0541A1B82CA8A005BCD96 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054131B82CA8A005BCD96 /* libavutil.a */; };
+		9BE0541B1B82CA8A005BCD96 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054141B82CA8A005BCD96 /* libswresample.a */; };
+		9BE0541C1B82CA8A005BCD96 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054151B82CA8A005BCD96 /* libswscale.a */; };
+		9BE054311B82CE00005BCD96 /* FFBitstreamFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE0541F1B82CE00005BCD96 /* FFBitstreamFilter.m */; };
+		9BE054321B82CE00005BCD96 /* FFFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE054211B82CE00005BCD96 /* FFFile.m */; };
+		9BE054331B82CE00005BCD96 /* FFInputFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE054231B82CE00005BCD96 /* FFInputFile.m */; };
+		9BE054341B82CE00005BCD96 /* FFInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE054251B82CE00005BCD96 /* FFInputStream.m */; };
+		9BE054351B82CE00005BCD96 /* FFmpegWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE054281B82CE00005BCD96 /* FFmpegWrapper.m */; };
+		9BE054361B82CE00005BCD96 /* FFOutputFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE0542A1B82CE00005BCD96 /* FFOutputFile.m */; };
+		9BE054371B82CE00005BCD96 /* FFOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE0542C1B82CE00005BCD96 /* FFOutputStream.m */; };
+		9BE054381B82CE00005BCD96 /* FFStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE0542E1B82CE00005BCD96 /* FFStream.m */; };
+		9BE054391B82CE00005BCD96 /* FFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE054301B82CE00005BCD96 /* FFUtilities.m */; };
+		9BE0546F1B82D34F005BCD96 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE0546E1B82D34F005BCD96 /* libz.dylib */; };
+		9BE054711B82D383005BCD96 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054701B82D383005BCD96 /* libbz2.dylib */; };
+		9BE054731B82D38B005BCD96 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054721B82D38B005BCD96 /* libiconv.dylib */; };
+		9BE054751B82F51C005BCD96 /* libpostproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054741B82F51C005BCD96 /* libpostproc.a */; };
+		9BE054771B82F571005BCD96 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE054761B82F571005BCD96 /* libx264.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +61,37 @@
 		9BE053FF1B82C388005BCD96 /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE054041B82C388005BCD96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BE054051B82C388005BCD96 /* testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTests.m; sourceTree = "<group>"; };
+		9BE0540F1B82CA8A005BCD96 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = "FFmpeg-iOS/lib/libavcodec.a"; sourceTree = "<group>"; };
+		9BE054101B82CA8A005BCD96 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = "FFmpeg-iOS/lib/libavdevice.a"; sourceTree = "<group>"; };
+		9BE054111B82CA8A005BCD96 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = "FFmpeg-iOS/lib/libavfilter.a"; sourceTree = "<group>"; };
+		9BE054121B82CA8A005BCD96 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = "FFmpeg-iOS/lib/libavformat.a"; sourceTree = "<group>"; };
+		9BE054131B82CA8A005BCD96 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = "FFmpeg-iOS/lib/libavutil.a"; sourceTree = "<group>"; };
+		9BE054141B82CA8A005BCD96 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = "FFmpeg-iOS/lib/libswresample.a"; sourceTree = "<group>"; };
+		9BE054151B82CA8A005BCD96 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = "FFmpeg-iOS/lib/libswscale.a"; sourceTree = "<group>"; };
+		9BE0541E1B82CE00005BCD96 /* FFBitstreamFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBitstreamFilter.h; sourceTree = "<group>"; };
+		9BE0541F1B82CE00005BCD96 /* FFBitstreamFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBitstreamFilter.m; sourceTree = "<group>"; };
+		9BE054201B82CE00005BCD96 /* FFFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFFile.h; sourceTree = "<group>"; };
+		9BE054211B82CE00005BCD96 /* FFFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFFile.m; sourceTree = "<group>"; };
+		9BE054221B82CE00005BCD96 /* FFInputFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFInputFile.h; sourceTree = "<group>"; };
+		9BE054231B82CE00005BCD96 /* FFInputFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFInputFile.m; sourceTree = "<group>"; };
+		9BE054241B82CE00005BCD96 /* FFInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFInputStream.h; sourceTree = "<group>"; };
+		9BE054251B82CE00005BCD96 /* FFInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFInputStream.m; sourceTree = "<group>"; };
+		9BE054261B82CE00005BCD96 /* FFmpegWrapper-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFmpegWrapper-Prefix.pch"; sourceTree = "<group>"; };
+		9BE054271B82CE00005BCD96 /* FFmpegWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFmpegWrapper.h; sourceTree = "<group>"; };
+		9BE054281B82CE00005BCD96 /* FFmpegWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFmpegWrapper.m; sourceTree = "<group>"; };
+		9BE054291B82CE00005BCD96 /* FFOutputFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFOutputFile.h; sourceTree = "<group>"; };
+		9BE0542A1B82CE00005BCD96 /* FFOutputFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFOutputFile.m; sourceTree = "<group>"; };
+		9BE0542B1B82CE00005BCD96 /* FFOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFOutputStream.h; sourceTree = "<group>"; };
+		9BE0542C1B82CE00005BCD96 /* FFOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFOutputStream.m; sourceTree = "<group>"; };
+		9BE0542D1B82CE00005BCD96 /* FFStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFStream.h; sourceTree = "<group>"; };
+		9BE0542E1B82CE00005BCD96 /* FFStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFStream.m; sourceTree = "<group>"; };
+		9BE0542F1B82CE00005BCD96 /* FFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUtilities.h; sourceTree = "<group>"; };
+		9BE054301B82CE00005BCD96 /* FFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUtilities.m; sourceTree = "<group>"; };
+		9BE0546E1B82D34F005BCD96 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9BE054701B82D383005BCD96 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		9BE054721B82D38B005BCD96 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		9BE054741B82F51C005BCD96 /* libpostproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpostproc.a; path = "FFmpeg-iOS/lib/libpostproc.a"; sourceTree = "<group>"; };
+		9BE054761B82F571005BCD96 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libx264.a; path = "x264/x264-iOS/lib/libx264.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +99,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE054771B82F571005BCD96 /* libx264.a in Frameworks */,
+				9BE054731B82D38B005BCD96 /* libiconv.dylib in Frameworks */,
+				9BE054711B82D383005BCD96 /* libbz2.dylib in Frameworks */,
+				9BE0546F1B82D34F005BCD96 /* libz.dylib in Frameworks */,
+				9BE054161B82CA8A005BCD96 /* libavcodec.a in Frameworks */,
+				9BE054171B82CA8A005BCD96 /* libavdevice.a in Frameworks */,
+				9BE054751B82F51C005BCD96 /* libpostproc.a in Frameworks */,
+				9BE054181B82CA8A005BCD96 /* libavfilter.a in Frameworks */,
+				9BE054191B82CA8A005BCD96 /* libavformat.a in Frameworks */,
+				9BE0541A1B82CA8A005BCD96 /* libavutil.a in Frameworks */,
+				9BE0541B1B82CA8A005BCD96 /* libswresample.a in Frameworks */,
+				9BE0541C1B82CA8A005BCD96 /* libswscale.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +127,19 @@
 		9BE053DD1B82C388005BCD96 = {
 			isa = PBXGroup;
 			children = (
+				9BE054761B82F571005BCD96 /* libx264.a */,
+				9BE054721B82D38B005BCD96 /* libiconv.dylib */,
+				9BE054701B82D383005BCD96 /* libbz2.dylib */,
+				9BE0546E1B82D34F005BCD96 /* libz.dylib */,
+				9BE0540F1B82CA8A005BCD96 /* libavcodec.a */,
+				9BE054101B82CA8A005BCD96 /* libavdevice.a */,
+				9BE054111B82CA8A005BCD96 /* libavfilter.a */,
+				9BE054121B82CA8A005BCD96 /* libavformat.a */,
+				9BE054741B82F51C005BCD96 /* libpostproc.a */,
+				9BE054131B82CA8A005BCD96 /* libavutil.a */,
+				9BE054141B82CA8A005BCD96 /* libswresample.a */,
+				9BE054151B82CA8A005BCD96 /* libswscale.a */,
+				9BE0541D1B82CE00005BCD96 /* FFmpegWrapper */,
 				9BE053E81B82C388005BCD96 /* test */,
 				9BE054021B82C388005BCD96 /* testTests */,
 				9BE053E71B82C388005BCD96 /* Products */,
@@ -117,6 +194,32 @@
 				9BE054041B82C388005BCD96 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BE0541D1B82CE00005BCD96 /* FFmpegWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				9BE0541E1B82CE00005BCD96 /* FFBitstreamFilter.h */,
+				9BE0541F1B82CE00005BCD96 /* FFBitstreamFilter.m */,
+				9BE054201B82CE00005BCD96 /* FFFile.h */,
+				9BE054211B82CE00005BCD96 /* FFFile.m */,
+				9BE054221B82CE00005BCD96 /* FFInputFile.h */,
+				9BE054231B82CE00005BCD96 /* FFInputFile.m */,
+				9BE054241B82CE00005BCD96 /* FFInputStream.h */,
+				9BE054251B82CE00005BCD96 /* FFInputStream.m */,
+				9BE054261B82CE00005BCD96 /* FFmpegWrapper-Prefix.pch */,
+				9BE054271B82CE00005BCD96 /* FFmpegWrapper.h */,
+				9BE054281B82CE00005BCD96 /* FFmpegWrapper.m */,
+				9BE054291B82CE00005BCD96 /* FFOutputFile.h */,
+				9BE0542A1B82CE00005BCD96 /* FFOutputFile.m */,
+				9BE0542B1B82CE00005BCD96 /* FFOutputStream.h */,
+				9BE0542C1B82CE00005BCD96 /* FFOutputStream.m */,
+				9BE0542D1B82CE00005BCD96 /* FFStream.h */,
+				9BE0542E1B82CE00005BCD96 /* FFStream.m */,
+				9BE0542F1B82CE00005BCD96 /* FFUtilities.h */,
+				9BE054301B82CE00005BCD96 /* FFUtilities.m */,
+			);
+			path = FFmpegWrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +322,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE054351B82CE00005BCD96 /* FFmpegWrapper.m in Sources */,
+				9BE054331B82CE00005BCD96 /* FFInputFile.m in Sources */,
 				9BE053F21B82C388005BCD96 /* ViewController.m in Sources */,
+				9BE054341B82CE00005BCD96 /* FFInputStream.m in Sources */,
+				9BE054371B82CE00005BCD96 /* FFOutputStream.m in Sources */,
+				9BE054361B82CE00005BCD96 /* FFOutputFile.m in Sources */,
 				9BE053EF1B82C388005BCD96 /* AppDelegate.m in Sources */,
+				9BE054321B82CE00005BCD96 /* FFFile.m in Sources */,
+				9BE054391B82CE00005BCD96 /* FFUtilities.m in Sources */,
 				9BE053EC1B82C388005BCD96 /* main.m in Sources */,
+				9BE054311B82CE00005BCD96 /* FFBitstreamFilter.m in Sources */,
+				9BE054381B82CE00005BCD96 /* FFStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,8 +461,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SRCROOT}/FFmpeg-iOS/include",
+				);
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/x264/x264-iOS/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,8 +481,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SRCROOT}/FFmpeg-iOS/include",
+				);
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FFmpeg-iOS/lib",
+					"$(PROJECT_DIR)/x264/x264-iOS/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
